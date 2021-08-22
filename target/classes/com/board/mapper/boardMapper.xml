@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+<resultMap type="BoardVo" id="Board">
+	<result property="board_num" column = "board_num"/>
+	<result property="title" column = "title" />
+	<result property="contents" column = "contents" />
+</resultMap>
+
+<select id = "boardList" resultMap = "Board">
+select * from board
+</select>
+</mapper>
